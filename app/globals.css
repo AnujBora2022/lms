@@ -1,14 +1,13 @@
 /* @import "react-quill/dist/quill.snow.css";
 @import "react-quill/dist/quill.bubble.css"; */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@uploadthing/react/styles.css";
 @import "react-quill-new/dist/quill.snow.css";
 @import "react-quill-new/dist/quill.bubble.css";
 
 
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-@import "@uploadthing/react/styles.css";
-
-@import "tailwindcss";
 html,
 body,
 :root{
