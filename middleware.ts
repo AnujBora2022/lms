@@ -21,3 +21,7 @@ export const config = {
     '/(api|trpc)(.*)',
   ],
 }
+
+
+//change name proxy.ts to middleware.ts as changed next16 to 14
+
