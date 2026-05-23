@@ -15,7 +15,7 @@ export const CategoryItem = ({
   label,
   value,
   icon:Icon,
-})=>{
+}: CategoryItemProps)=>{
 
   const pathname = usePathname();
   const router = useRouter();
