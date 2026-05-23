@@ -34,7 +34,7 @@ interface PriceFormProps{
 };
 
 const formSchema = z.object({
-  price: z.coerce.number().min(0),
+  price: z.number().min(0),
 });
 
 export const PriceForm=({
@@ -115,6 +115,7 @@ export const PriceForm=({
                       disabled={isSubmitting}
                       placeholder="Set a price for your Course"
                       {...field}
+                      onChange={(e) => field.onChange(parseFloat(e.target.value) || 0)}
                     />
 
                   </FormControl>
