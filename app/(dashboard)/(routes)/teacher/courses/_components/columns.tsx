@@ -90,30 +90,74 @@ export const columns: ColumnDef<Course>[] = [
       )
     }
   },
-  {
-    id:"actions",
-    cell:({row})=>{
-      const {id} = row.original;
-
+  { 
+    id: "actions",
+    cell: ({ row }) => {
+      const { id } = row.original;
       return(
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4"/>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <Link href={`/teacher/courses/${id}`}>
-              <DropdownMenuItem>
-                <Pencil className="h-4 w-4 mr-2"/>
-                Edit
-              </DropdownMenuItem>
-            </Link>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Link href={`/teacher/courses/${id}`} className="flex">
+        <Pencil className="mr-2 h-4 w-4" />
+          Edit
+        </Link>   
       )
-    }
+    },
+    
   }
+  // {
+  //   id: "actions",
+  //   cell: ({ row }) => {
+  //     const { id } = row.original;
+
+  //     return ( 
+  //       <DropdownMenu modal={false}>
+  //         <DropdownMenuTrigger asChild>
+  //           <Button variant="ghost" className="h-8 w-8 p-0">
+  //             <MoreHorizontal className="h-4 w-4" />
+  //           </Button>
+  //         </DropdownMenuTrigger>
+
+  //         <DropdownMenuContent
+  //           align="end"
+  //           className="bg-white border shadow-lg z-[100]"
+  //         >
+  //           <DropdownMenuItem asChild>
+  //             <Link href={`/teacher/courses/${id}`}>
+  //               <Pencil className="mr-2 h-4 w-4" />
+  //               Edit
+  //             </Link>
+  //           </DropdownMenuItem>
+  //         </DropdownMenuContent>
+  //       </DropdownMenu> 
+  //     );
+  //   },
+  // }
+
+  // {
+  //   id:"actions",
+  //   cell:({row})=>{
+  //     const {id} = row.original;
+
+  //     return(
+  //       <DropdownMenu>
+  //         <DropdownMenuTrigger asChild>
+  //           <Button variant="ghost" className="h-8 w-8 p-0">
+  //             <span className="sr-only">Open menu</span>
+  //             <MoreHorizontal className="h-4 w-4"/>
+  //           </Button>
+  //         </DropdownMenuTrigger>
+  //         <DropdownMenuContent align="end">
+  //           <DropdownMenuItem asChild>
+  //             <Link href={`/teacher/courses/${id}`}>
+  //               <div className="flex items-center">
+  //                 <Pencil className="h-4 w-4 mr-2" />
+  //                 Edit
+  //               </div>
+  //             </Link>
+  //           </DropdownMenuItem>
+  //         </DropdownMenuContent>          
+  //       </DropdownMenu>
+  //     )
+  //   }
+  // }
   
 ]

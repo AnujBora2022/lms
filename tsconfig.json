@@ -35,7 +35,8 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/.category-formtsx"
+    "app/(dashboard)/(routes)/teacher/courses/[courseId]/_components/.category-formtsx",
+    "next.config.mjs"
   ],
   "exclude": [
     "node_modules"
